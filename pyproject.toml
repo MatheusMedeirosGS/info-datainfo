@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "info-datainfo"
-version = "0.1.0"
+version = "1.0.0"
 license = { text = "MIT" }
 description = "Info, da DataInfo: base de conhecimento que conversa, pergunta e aprende."
 requires-python = ">=3.10"

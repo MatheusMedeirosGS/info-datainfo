@@ -1,0 +1,11 @@
+sujeito,relacao,objeto,confianca
+Leao,é_um,Mamifero,1.0
+Leao,predador_de,Zebra,0.95
+Leao,habitat_principal,Savana,1.0
+Zebra,é_um,Mamifero,1.0
+Zebra,tem_propriedade,listras,1.0
+Elefante,é_um,Mamifero,1.0
+Elefante,tem_propriedade,tromba,1.0
+Elefante,habitat_principal,Savana,0.9
+Lobo,predador_de,Coelho,0.85
+Coelho,é_um,Mamifero,1.0

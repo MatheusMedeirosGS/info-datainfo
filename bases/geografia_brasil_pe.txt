@@ -1,0 +1,225 @@
+# Base de conhecimento: geografia do Brasil e de Pernambuco
+# Formato: sujeito | relação | objeto | confiança (opcional, de 0 a 1)
+# Fontes: IBGE (divisão regional, unidades da federação, mesorregiões de 1989/1990, biomas),
+# UNESCO (Lista do Patrimônio Mundial e Patrimônio Cultural Imaterial), Governo de Pernambuco.
+# Observação: em 2017 o IBGE substituiu mesorregiões por regiões geográficas intermediárias;
+# as mesorregiões foram mantidas aqui por serem a divisão mais conhecida.
+
+# --- propriedades das relações ---
+@transitiva subclasse_de
+@transitiva fica_em
+@simetrica faz_fronteira_com
+@simetrica conurbada_com
+@inversa capital_de tem_capital
+@inversa banha banhada_por
+@funcional capital_de
+@funcional mesorregiao
+@disjuntas Estado Municipio
+@disjuntas Municipio DistritoEstadual
+@disjuntas Estado RegiaoGeografica
+
+# --- regras ---
+@regra capital_fica_no_estado: (?c capital_de ?e) => (?c fica_em ?e) 0.99
+@regra capital_e_municipio: (?c capital_de ?e) & (?e é_um Estado) => (?c é_um Municipio) 0.95
+@regra mesorregiao_fica_no_estado: (?c mesorregiao ?m) & (?m fica_em ?e) => (?c fica_em ?e) 0.95
+@regra vizinho_da_mesma_regiao: (?a faz_fronteira_com ?b) & (?a fica_em ?r) & (?b fica_em ?r) & (?r é_um RegiaoGeografica) => (?a vizinho_regional_de ?b) 0.9
+
+# --- classes ---
+Estado | subclasse_de | UnidadeFederativa
+DistritoFederal | é_um | UnidadeFederativa
+Capital | subclasse_de | Cidade
+
+# --- regiões ---
+Norte | é_um | RegiaoGeografica
+Nordeste | é_um | RegiaoGeografica
+CentroOeste | é_um | RegiaoGeografica
+Sudeste | é_um | RegiaoGeografica
+Sul | é_um | RegiaoGeografica
+Norte | fica_em | Brasil
+Nordeste | fica_em | Brasil
+CentroOeste | fica_em | Brasil
+Sudeste | fica_em | Brasil
+Sul | fica_em | Brasil
+Norte | bioma_predominante | Amazonia
+Nordeste | bioma_predominante | Caatinga
+CentroOeste | bioma_predominante | Cerrado
+Brasilia | capital_de | Brasil
+Brasilia | fica_em | DistritoFederal
+DistritoFederal | fica_em | CentroOeste
+
+# --- unidades da federação: região e capital ---
+Acre | é_um | Estado
+Acre | fica_em | Norte
+RioBranco | capital_de | Acre
+Amapa | é_um | Estado
+Amapa | fica_em | Norte
+Macapa | capital_de | Amapa
+Amazonas | é_um | Estado
+Amazonas | fica_em | Norte
+Manaus | capital_de | Amazonas
+Para | é_um | Estado
+Para | fica_em | Norte
+Belem | capital_de | Para
+Rondonia | é_um | Estado
+Rondonia | fica_em | Norte
+PortoVelho | capital_de | Rondonia
+Roraima | é_um | Estado
+Roraima | fica_em | Norte
+BoaVista | capital_de | Roraima
+Tocantins | é_um | Estado
+Tocantins | fica_em | Norte
+Palmas | capital_de | Tocantins
+Alagoas | é_um | Estado
+Alagoas | fica_em | Nordeste
+Maceio | capital_de | Alagoas
+Bahia | é_um | Estado
+Bahia | fica_em | Nordeste
+Salvador | capital_de | Bahia
+Ceara | é_um | Estado
+Ceara | fica_em | Nordeste
+Fortaleza | capital_de | Ceara
+Maranhao | é_um | Estado
+Maranhao | fica_em | Nordeste
+SaoLuis | capital_de | Maranhao
+Paraiba | é_um | Estado
+Paraiba | fica_em | Nordeste
+JoaoPessoa | capital_de | Paraiba
+Pernambuco | é_um | Estado
+Pernambuco | fica_em | Nordeste
+Recife | capital_de | Pernambuco
+Piaui | é_um | Estado
+Piaui | fica_em | Nordeste
+Teresina | capital_de | Piaui
+RioGrandeDoNorte | é_um | Estado
+RioGrandeDoNorte | fica_em | Nordeste
+Natal | capital_de | RioGrandeDoNorte
+Sergipe | é_um | Estado
+Sergipe | fica_em | Nordeste
+Aracaju | capital_de | Sergipe
+Goias | é_um | Estado
+Goias | fica_em | CentroOeste
+Goiania | capital_de | Goias
+MatoGrosso | é_um | Estado
+MatoGrosso | fica_em | CentroOeste
+Cuiaba | capital_de | MatoGrosso
+MatoGrossoDoSul | é_um | Estado
+MatoGrossoDoSul | fica_em | CentroOeste
+CampoGrande | capital_de | MatoGrossoDoSul
+EspiritoSanto | é_um | Estado
+EspiritoSanto | fica_em | Sudeste
+Vitoria | capital_de | EspiritoSanto
+MinasGerais | é_um | Estado
+MinasGerais | fica_em | Sudeste
+BeloHorizonte | capital_de | MinasGerais
+EstadoDoRioDeJaneiro | é_um | Estado
+EstadoDoRioDeJaneiro | fica_em | Sudeste
+RioDeJaneiro | capital_de | EstadoDoRioDeJaneiro
+EstadoDeSaoPaulo | é_um | Estado
+EstadoDeSaoPaulo | fica_em | Sudeste
+SaoPaulo | capital_de | EstadoDeSaoPaulo
+Parana | é_um | Estado
+Parana | fica_em | Sul
+Curitiba | capital_de | Parana
+RioGrandeDoSul | é_um | Estado
+RioGrandeDoSul | fica_em | Sul
+PortoAlegre | capital_de | RioGrandeDoSul
+SantaCatarina | é_um | Estado
+SantaCatarina | fica_em | Sul
+Florianopolis | capital_de | SantaCatarina
+
+# --- fronteiras entre estados do Nordeste (e vizinhos) ---
+Pernambuco | faz_fronteira_com | Paraiba
+Pernambuco | faz_fronteira_com | Ceara
+Pernambuco | faz_fronteira_com | Piaui
+Pernambuco | faz_fronteira_com | Bahia
+Pernambuco | faz_fronteira_com | Alagoas
+Paraiba | faz_fronteira_com | RioGrandeDoNorte
+Paraiba | faz_fronteira_com | Ceara
+RioGrandeDoNorte | faz_fronteira_com | Ceara
+Ceara | faz_fronteira_com | Piaui
+Piaui | faz_fronteira_com | Maranhao
+Piaui | faz_fronteira_com | Bahia
+Piaui | faz_fronteira_com | Tocantins
+Alagoas | faz_fronteira_com | Sergipe
+Alagoas | faz_fronteira_com | Bahia
+Sergipe | faz_fronteira_com | Bahia
+Maranhao | faz_fronteira_com | Tocantins
+Maranhao | faz_fronteira_com | Para
+Bahia | faz_fronteira_com | Tocantins
+Bahia | faz_fronteira_com | Goias
+Bahia | faz_fronteira_com | MinasGerais
+Bahia | faz_fronteira_com | EspiritoSanto
+
+# --- Pernambuco ---
+Pernambuco | numero_de_municipios | Municipios184
+Pernambuco | tem_bioma | Caatinga
+Pernambuco | tem_bioma | MataAtlantica
+Caatinga | tem_propriedade | exclusivamente_brasileiro
+MetropolitanaDoRecife | fica_em | Pernambuco
+MataPernambucana | fica_em | Pernambuco
+AgrestePernambucano | fica_em | Pernambuco
+SertaoPernambucano | fica_em | Pernambuco
+SaoFranciscoPernambucano | fica_em | Pernambuco
+MetropolitanaDoRecife | é_um | Mesorregiao
+MataPernambucana | é_um | Mesorregiao
+AgrestePernambucano | é_um | Mesorregiao
+SertaoPernambucano | é_um | Mesorregiao
+SaoFranciscoPernambucano | é_um | Mesorregiao
+Recife | mesorregiao | MetropolitanaDoRecife
+Olinda | é_um | Municipio
+Olinda | mesorregiao | MetropolitanaDoRecife
+JaboataoDosGuararapes | é_um | Municipio
+JaboataoDosGuararapes | mesorregiao | MetropolitanaDoRecife
+Paulista | é_um | Municipio
+Paulista | mesorregiao | MetropolitanaDoRecife
+CaboDeSantoAgostinho | é_um | Municipio
+CaboDeSantoAgostinho | mesorregiao | MetropolitanaDoRecife
+Ipojuca | é_um | Municipio
+Ipojuca | mesorregiao | MetropolitanaDoRecife
+Goiana | é_um | Municipio
+Goiana | mesorregiao | MataPernambucana
+Caruaru | é_um | Municipio
+Caruaru | mesorregiao | AgrestePernambucano
+Garanhuns | é_um | Municipio
+Garanhuns | mesorregiao | AgrestePernambucano
+Arcoverde | é_um | Municipio
+Arcoverde | mesorregiao | SertaoPernambucano
+SerraTalhada | é_um | Municipio
+SerraTalhada | mesorregiao | SertaoPernambucano
+Petrolina | é_um | Municipio
+Petrolina | mesorregiao | SaoFranciscoPernambucano
+Juazeiro | é_um | Municipio
+Juazeiro | fica_em | Bahia
+Petrolina | conurbada_com | Juazeiro
+Recife | conurbada_com | Olinda
+Recife | conurbada_com | JaboataoDosGuararapes
+# exceção real: Fernando de Noronha é distrito estadual, não município
+FernandoDeNoronha | é_um | DistritoEstadual
+FernandoDeNoronha | fica_em | Pernambuco
+# exceção real: Brasília não é município (o DF não se divide em municípios)
+Brasilia | é_um | Cidade
+
+# --- rios ---
+RioSaoFrancisco | banha | Petrolina
+RioSaoFrancisco | banha | Juazeiro
+RioCapibaribe | banha | Recife
+RioBeberibe | banha | Recife
+RioBeberibe | banha | Olinda
+RioSaoFrancisco | é_um | Rio
+RioCapibaribe | é_um | Rio
+RioBeberibe | é_um | Rio
+
+# --- patrimônio e cultura ---
+CentroHistoricoDeOlinda | fica_em | Olinda
+CentroHistoricoDeOlinda | é_um | PatrimonioMundialUNESCO
+CentroHistoricoDeOlinda | ano_de_inscricao | Ano1982
+IlhasAtlanticasBrasileiras | inclui | FernandoDeNoronha
+IlhasAtlanticasBrasileiras | é_um | PatrimonioMundialUNESCO
+IlhasAtlanticasBrasileiras | ano_de_inscricao | Ano2001
+Frevo | é_um | PatrimonioImaterialUNESCO
+Frevo | ano_de_inscricao | Ano2012
+Frevo | originado_em | Recife
+Maracatu | originado_em | Pernambuco
+GaloDaMadrugada | é_um | BlocoDeCarnaval
+GaloDaMadrugada | fica_em | Recife
+PortoDeSuape | fica_em | Ipojuca

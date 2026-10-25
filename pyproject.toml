@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "info-datainfo"
+version = "1.0.0"
+license = { text = "MIT" }
+description = "Info, da DataInfo: base de conhecimento que conversa, pergunta e aprende."
+requires-python = ">=3.10"
+dependencies = ["numpy", "networkx", "matplotlib"]
+
+[project.optional-dependencies]
+pdf = ["pymupdf"]
+notebook = ["ipywidgets"]
+llm = ["anthropic"]
+
+[project.scripts]
+info = "info_datainfo:main"
+
+[tool.setuptools]
+py-modules = ["info_datainfo"]

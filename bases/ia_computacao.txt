@@ -1,0 +1,172 @@
+# Base de conhecimento: inteligência artificial e computação
+# Formato: sujeito | relação | objeto | confiança (opcional, de 0 a 1)
+# Fontes: Russell e Norvig, "Inteligência Artificial: uma abordagem moderna"; Turing (1950),
+# "Computing Machinery and Intelligence"; proposta de Dartmouth (McCarthy et al., 1955);
+# Vaswani et al. (2017), "Attention Is All You Need"; páginas oficiais de Python, Java e Linux.
+
+# --- propriedades das relações ---
+@oposta tem_propriedade não_tem_propriedade
+@transitiva subclasse_de
+@transitiva influenciou
+@inversa criado_por criou
+@inversa venceu derrotado_por
+@funcional ano_de_criacao
+@funcional nacionalidade
+@funcional tipagem
+@funcional complexidade_pior_caso
+@funcional politica_de_acesso
+@disjuntas AlgoritmoSupervisionado AlgoritmoNaoSupervisionado
+@disjuntas AlgoritmoSupervisionado AlgoritmoPorReforco
+@disjuntas AlgoritmoNaoSupervisionado AlgoritmoPorReforco
+@disjuntas Pessoa LinguagemDeProgramacao
+
+# --- regras ---
+@regra origem_nacional: (?x criado_por ?p) & (?p nacionalidade ?n) => (?x origem_nacional ?n) 0.7
+@regra criador_e_pioneiro: (?p criou ?x) & (?x é_um LinguagemDeProgramacao) => (?p é_um CriadorDeLinguagem) 0.9
+@regra ordenacao_eficiente: (?a é_um AlgoritmoDeOrdenacao) & (?a complexidade_pior_caso OnLogN) => (?a tem_propriedade eficiente_no_pior_caso) 0.9
+@regra heranca_negativa: (?x é_um ?c) & (?c não_tem_propriedade ?p) => (?x não_tem_propriedade ?p) 0.9
+
+# --- áreas da IA ---
+AprendizadoDeMaquina | subclasse_de | InteligenciaArtificial
+AprendizadoProfundo | subclasse_de | AprendizadoDeMaquina
+ProcessamentoDeLinguagemNatural | subclasse_de | InteligenciaArtificial
+VisaoComputacional | subclasse_de | InteligenciaArtificial
+RepresentacaoDoConhecimento | subclasse_de | InteligenciaArtificial
+SistemaEspecialista | subclasse_de | RepresentacaoDoConhecimento
+AlgoritmoSupervisionado | subclasse_de | AlgoritmoDeAprendizado
+AlgoritmoNaoSupervisionado | subclasse_de | AlgoritmoDeAprendizado
+AlgoritmoPorReforco | subclasse_de | AlgoritmoDeAprendizado
+AlgoritmoSupervisionado | tem_propriedade | requer_dados_rotulados
+AlgoritmoNaoSupervisionado | não_tem_propriedade | requer_dados_rotulados
+AlgoritmoPorReforco | tem_propriedade | aprende_por_recompensa
+AlgoritmoPorReforco | não_tem_propriedade | requer_dados_rotulados
+
+# --- algoritmos de aprendizado ---
+RegressaoLinear | é_um | AlgoritmoSupervisionado
+RegressaoLinear | resolve_tarefa | Regressao
+RegressaoLogistica | é_um | AlgoritmoSupervisionado
+RegressaoLogistica | resolve_tarefa | Classificacao
+ArvoreDeDecisao | é_um | AlgoritmoSupervisionado
+ArvoreDeDecisao | tem_propriedade | interpretavel
+KNN | é_um | AlgoritmoSupervisionado
+SVM | é_um | AlgoritmoSupervisionado
+NaiveBayes | é_um | AlgoritmoSupervisionado
+NaiveBayes | baseado_em | TeoremaDeBayes
+KMeans | é_um | AlgoritmoNaoSupervisionado
+KMeans | resolve_tarefa | Agrupamento
+PCA | é_um | AlgoritmoNaoSupervisionado
+PCA | resolve_tarefa | ReducaoDeDimensionalidade
+QLearning | é_um | AlgoritmoPorReforco
+RedeNeural | é_um | ModeloDeAprendizado
+Transformer | é_um | ArquiteturaDeRedeNeural
+Transformer | baseado_em | MecanismoDeAtencao
+Transformer | ano_de_criacao | Ano2017
+Perceptron | criado_por | FrankRosenblatt
+Perceptron | ano_de_criacao | Ano1958
+Retropropagacao | popularizada_por | RumelhartHintonWilliams
+Retropropagacao | ano_de_popularizacao | Ano1986
+
+# --- representação do conhecimento e raciocínio ---
+Tripla | é_um | FormaDeRepresentacao
+Ontologia | é_um | FormaDeRepresentacao
+RedeSemantica | é_um | FormaDeRepresentacao
+RDF | representa_com | Tripla
+EncadeamentoParaFrente | parte_dos | Fatos
+EncadeamentoParaFrente | tem_propriedade | guiado_por_dados
+EncadeamentoParaTras | parte_do | Objetivo
+EncadeamentoParaTras | tem_propriedade | guiado_por_objetivo
+Prolog | usa | EncadeamentoParaTras
+Abducao | é_um | FormaDeRaciocinio
+Deducao | é_um | FormaDeRaciocinio
+Inducao | é_um | FormaDeRaciocinio
+
+# --- busca ---
+BuscaEmLargura | é_um | BuscaCega
+BuscaEmProfundidade | é_um | BuscaCega
+BuscaAEstrela | é_um | BuscaInformada
+BuscaCega | não_tem_propriedade | usa_heuristica
+BuscaInformada | tem_propriedade | usa_heuristica
+BuscaEmLargura | tem_propriedade | completa
+BuscaAEstrela | tem_propriedade | otima_com_heuristica_admissivel
+
+# --- marcos históricos ---
+TesteDeTuring | criado_por | AlanTuring
+TesteDeTuring | ano_de_criacao | Ano1950
+ConferenciaDeDartmouth | ano_de_criacao | Ano1956
+ConferenciaDeDartmouth | é_um | MarcoDaIA
+TermoInteligenciaArtificial | criado_por | JohnMcCarthy
+ELIZA | criado_por | JosephWeizenbaum
+ELIZA | ano_de_criacao | Ano1966
+ELIZA | é_um | Chatbot
+DeepBlue | desenvolvido_por | IBM
+DeepBlue | venceu | GarryKasparov
+DeepBlue | ano_da_vitoria | Ano1997
+AlphaGo | desenvolvido_por | DeepMind
+AlphaGo | venceu | LeeSedol
+AlphaGo | ano_da_vitoria | Ano2016
+
+# --- linguagens de programação ---
+Python | é_um | LinguagemDeProgramacao
+Python | criado_por | GuidoVanRossum
+Python | ano_de_criacao | Ano1991
+Python | tipagem | TipagemDinamica
+Java | é_um | LinguagemDeProgramacao
+Java | criado_por | JamesGosling
+Java | ano_de_criacao | Ano1995
+Java | tipagem | TipagemEstatica
+LinguagemC | é_um | LinguagemDeProgramacao
+LinguagemC | criado_por | DennisRitchie
+LinguagemC | ano_de_criacao | Ano1972
+LinguagemC | tipagem | TipagemEstatica
+LISP | é_um | LinguagemDeProgramacao
+LISP | criado_por | JohnMcCarthy
+LISP | ano_de_criacao | Ano1958
+Prolog | é_um | LinguagemDeProgramacao
+Prolog | criado_por | AlainColmerauer
+Prolog | ano_de_criacao | Ano1972
+Prolog | é_um | LinguagemLogica
+LinguagemC | influenciou | Java
+LISP | influenciou | Python | 0.7
+Linux | criado_por | LinusTorvalds
+Linux | ano_de_criacao | Ano1991
+Linux | é_um | NucleoDeSistemaOperacional
+
+# --- pessoas ---
+AlanTuring | é_um | Pessoa
+AlanTuring | nacionalidade | Britanica
+JohnMcCarthy | é_um | Pessoa
+JohnMcCarthy | nacionalidade | EstadunidenseNorteAmericana
+GuidoVanRossum | é_um | Pessoa
+GuidoVanRossum | nacionalidade | Holandesa
+LinusTorvalds | é_um | Pessoa
+LinusTorvalds | nacionalidade | Finlandesa
+DennisRitchie | é_um | Pessoa
+DennisRitchie | nacionalidade | EstadunidenseNorteAmericana
+JamesGosling | é_um | Pessoa
+JamesGosling | nacionalidade | Canadense
+AlainColmerauer | é_um | Pessoa
+AlainColmerauer | nacionalidade | Francesa
+JosephWeizenbaum | é_um | Pessoa
+FrankRosenblatt | é_um | Pessoa
+
+# --- estruturas de dados e algoritmos clássicos ---
+Pilha | politica_de_acesso | LIFO
+Fila | politica_de_acesso | FIFO
+Pilha | é_um | EstruturaDeDados
+Fila | é_um | EstruturaDeDados
+ArvoreBinaria | é_um | EstruturaDeDados
+TabelaHash | é_um | EstruturaDeDados
+Grafo | é_um | EstruturaDeDados
+BuscaLinear | complexidade_pior_caso | On
+BuscaBinaria | complexidade_pior_caso | OLogN
+BuscaBinaria | exige | VetorOrdenado
+BubbleSort | é_um | AlgoritmoDeOrdenacao
+BubbleSort | complexidade_pior_caso | ON2
+QuickSort | é_um | AlgoritmoDeOrdenacao
+QuickSort | complexidade_pior_caso | ON2
+QuickSort | complexidade_caso_medio | OnLogN
+MergeSort | é_um | AlgoritmoDeOrdenacao
+MergeSort | complexidade_pior_caso | OnLogN
+MergeSort | tem_propriedade | estavel
+HeapSort | é_um | AlgoritmoDeOrdenacao
+HeapSort | complexidade_pior_caso | OnLogN

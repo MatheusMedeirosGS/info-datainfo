@@ -1,0 +1,26 @@
+[
+  [
+    "Ra",
+    "é_um",
+    "Anfibio",
+    1.0
+  ],
+  [
+    "Ra",
+    "habitat_principal",
+    "Lagoa",
+    0.9
+  ],
+  [
+    "Sapo",
+    "é_um",
+    "Anfibio",
+    1.0
+  ],
+  [
+    "Anfibio",
+    "subclasse_de",
+    "Animal",
+    1.0
+  ]
+]

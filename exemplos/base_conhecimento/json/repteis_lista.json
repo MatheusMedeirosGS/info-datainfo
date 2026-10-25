@@ -1,0 +1,38 @@
+[
+  {
+    "sujeito": "Jiboia",
+    "relacao": "é_um",
+    "objeto": "Reptil",
+    "confianca": 1.0
+  },
+  {
+    "sujeito": "Jiboia",
+    "relacao": "predador_de",
+    "objeto": "Rato",
+    "confianca": 0.9
+  },
+  {
+    "sujeito": "Jacare",
+    "relacao": "é_um",
+    "objeto": "Reptil",
+    "confianca": 1.0
+  },
+  {
+    "sujeito": "Jacare",
+    "relacao": "habitat_principal",
+    "objeto": "Pantano",
+    "confianca": 1.0
+  },
+  {
+    "sujeito": "Jacare",
+    "relacao": "predador_de",
+    "objeto": "Capivara",
+    "confianca": 0.8
+  },
+  {
+    "sujeito": "Capivara",
+    "relacao": "é_um",
+    "objeto": "Mamifero",
+    "confianca": 1.0
+  }
+]

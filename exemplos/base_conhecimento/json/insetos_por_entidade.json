@@ -1,0 +1,30 @@
+{
+  "Inseto": {
+    "subclasse_de": "Animal",
+    "tem_propriedade": [
+      "antenas",
+      "seis_patas"
+    ]
+  },
+  "Formiga": {
+    "é_um": "Inseto",
+    "não_tem_propriedade": [
+      "voa"
+    ],
+    "parceiro_de": "Formiga_rainha"
+  },
+  "Abelha": {
+    "é_um": "Inseto",
+    "tem_propriedade": [
+      "voa",
+      "asas"
+    ],
+    "habitat_principal": "Colmeia"
+  },
+  "Joaninha": {
+    "é_um": "Inseto",
+    "predador_de": [
+      "Pulgao"
+    ]
+  }
+}

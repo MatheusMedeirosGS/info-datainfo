@@ -1,0 +1,10 @@
+sujeito;relação;objeto;confiança
+Orca;é_um;Mamifero;1,0
+Orca;predador_de;Foca;0,9
+Orca;compete_com;Tubarao;0,7
+Orca;habitat_principal;Oceano;1,0
+Foca;é_um;Mamifero;1,0
+Foca;habitat_principal;Oceano;0,95
+Tartaruga;é_um;Reptil;1,0
+Tartaruga;habitat_principal;Oceano;0,9
+Golfinho;habitat_principal;Rio;0,8

@@ -1,0 +1,92 @@
+# Base de conhecimento de zoologia
+# Formato de cada linha:  sujeito | relação | objeto | confiança (opcional, de 0 a 1)
+# Linhas que começam com @ declaram propriedades das relações e regras.
+# Linhas que começam com # são comentários. Também é aceita uma frase simples, como: o gato caça o rato
+
+# --- propriedades das relações ---
+@oposta tem_propriedade não_tem_propriedade
+@transitiva subclasse_de
+@transitiva evoluiu_de
+@inversa predador_de presa_de
+@simetrica parceiro_de
+@simetrica compete_com
+@funcional habitat_principal
+@disjuntas Ave Mamifero
+@disjuntas Mamifero Peixe
+@disjuntas Ave Peixe
+
+# --- regra de conhecimento (código 1 da aula): penas e nada sugerem ave aquática ---
+@regra ave_aquatica: (?a tem_propriedade penas) & (?a tem_propriedade nada) => (?a é_um AveAquatica) 0.85
+
+# --- taxonomia ---
+Ave | subclasse_de | Animal
+Mamifero | subclasse_de | Animal
+Peixe | subclasse_de | Animal
+Reptil | subclasse_de | Animal
+AveAquatica | subclasse_de | Ave
+Animal | subclasse_de | SerVivo
+
+# --- o que cada classe tem em comum ---
+Animal | tem_propriedade | respira
+Ave | tem_propriedade | penas
+Ave | tem_propriedade | voa
+Mamifero | tem_propriedade | pelos
+Mamifero | tem_propriedade | mama
+Peixe | tem_propriedade | nada
+Peixe | tem_propriedade | escamas
+Reptil | tem_propriedade | escamas
+
+# --- aves ---
+Aguia | é_um | Ave
+Pato | é_um | Ave
+Pato | tem_propriedade | nada
+Cisne | é_um | Ave
+Cisne | tem_propriedade | nada
+Pinguim | é_um | Ave
+Pinguim | tem_propriedade | nada
+Pinguim | não_tem_propriedade | voa
+Pata | é_um | Ave
+Pato | parceiro_de | Pata
+
+# --- mamíferos ---
+Gato | é_um | Mamifero
+Cachorro | é_um | Mamifero
+Lobo | é_um | Mamifero
+Golfinho | é_um | Mamifero
+Golfinho | tem_propriedade | nada
+Baleia | é_um | Mamifero
+Baleia | tem_propriedade | nada
+
+# --- peixes e répteis ---
+Tubarao | é_um | Peixe
+Salmao | é_um | Peixe
+Cobra | é_um | Reptil
+Cobra | não_tem_propriedade | pelos
+
+# --- cadeia alimentar ---
+Aguia | predador_de | Salmao
+Tubarao | predador_de | Salmao
+Golfinho | predador_de | Salmao
+Gato | predador_de | Rato
+Cobra | predador_de | Sapo
+Tubarao | predador_de | Golfinho | 0.5
+
+# --- competição por alimento (a IA pode descobrir que predadores da mesma presa competem) ---
+Aguia | compete_com | Tubarao
+Tubarao | compete_com | Golfinho
+
+# --- evolução ---
+Cachorro | evoluiu_de | Lobo
+Lobo | evoluiu_de | Canideo
+Canideo | evoluiu_de | Carnivoro
+
+# --- habitat (de propósito, há um conflito e várias lacunas) ---
+Golfinho | habitat_principal | Oceano
+Golfinho | habitat_principal | RioDoce | 0.6
+Tubarao | habitat_principal | Oceano
+Salmao | habitat_principal | Rio
+Pinguim | habitat_principal | Antartida
+
+# --- entidades sem classe, para a IA perguntar ---
+Rato | tem_propriedade | pelos
+Sapo | tem_propriedade | respira

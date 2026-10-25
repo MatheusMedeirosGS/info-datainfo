@@ -1,0 +1,162 @@
+# Base de conhecimento: redes de computadores e infraestrutura
+# Formato: sujeito | relação | objeto | confiança (opcional, de 0 a 1)
+# Fontes: modelo OSI (ISO/IEC 7498-1), registro de portas da IANA, RFC 1918 (endereços privados),
+# RFC 791 (IPv4), RFC 8200 (IPv6), padrões IEEE 802.3 (Ethernet) e 802.11 (Wi-Fi).
+
+# --- propriedades das relações ---
+@oposta tem_propriedade não_tem_propriedade
+@transitiva subclasse_de
+@transitiva acima_de
+@inversa acima_de abaixo_de
+@inversa usa_transporte transporta
+@funcional numero_da_camada
+@funcional camada_osi
+@funcional porta_padrao
+@funcional tamanho_do_endereco
+@funcional padronizado_por
+@disjuntas ProtocoloOrientadoAConexao ProtocoloSemConexao
+@disjuntas EnderecoPrivado EnderecoPublico
+
+# --- regras ---
+@regra transporte_confiavel: (?p usa_transporte TCP) => (?p tem_propriedade entrega_confiavel) 0.9
+@regra camada_do_equipamento: (?d opera_na_camada Rede) => (?d tem_propriedade encaminha_por_endereco_ip) 0.85
+@regra camada_enlace: (?d opera_na_camada Enlace) => (?d tem_propriedade encaminha_por_endereco_mac) 0.85
+# um protocolo de aplicação depende do protocolo de transporte que usa
+@regra depende_do_transporte: (?p usa_transporte ?t) & (?t camada_osi ?c) => (?p depende_da_camada ?c) 0.8
+@regra heranca_negativa: (?x é_um ?c) & (?c não_tem_propriedade ?p) => (?x não_tem_propriedade ?p) 0.9
+
+# --- modelo OSI: 7 camadas, da mais alta para a mais baixa ---
+Aplicacao | numero_da_camada | Camada7
+Apresentacao | numero_da_camada | Camada6
+Sessao | numero_da_camada | Camada5
+Transporte | numero_da_camada | Camada4
+Rede | numero_da_camada | Camada3
+Enlace | numero_da_camada | Camada2
+Fisica | numero_da_camada | Camada1
+Aplicacao | acima_de | Apresentacao
+Apresentacao | acima_de | Sessao
+Sessao | acima_de | Transporte
+Transporte | acima_de | Rede
+Rede | acima_de | Enlace
+Enlace | acima_de | Fisica
+Aplicacao | é_um | CamadaOSI
+Apresentacao | é_um | CamadaOSI
+Sessao | é_um | CamadaOSI
+Transporte | é_um | CamadaOSI
+Rede | é_um | CamadaOSI
+Enlace | é_um | CamadaOSI
+Fisica | é_um | CamadaOSI
+ModeloTCPIP | numero_de_camadas | Quatro
+ModeloOSI | numero_de_camadas | Sete
+
+# --- protocolos: classes ---
+ProtocoloOrientadoAConexao | subclasse_de | Protocolo
+ProtocoloSemConexao | subclasse_de | Protocolo
+ProtocoloOrientadoAConexao | tem_propriedade | estabelece_conexao
+ProtocoloSemConexao | não_tem_propriedade | estabelece_conexao
+TCP | é_um | ProtocoloOrientadoAConexao
+UDP | é_um | ProtocoloSemConexao
+TCP | tem_propriedade | entrega_ordenada
+TCP | tem_propriedade | controle_de_congestionamento
+TCP | tem_propriedade | handshake_de_tres_vias
+UDP | não_tem_propriedade | entrega_ordenada
+UDP | tem_propriedade | baixa_latencia
+
+# --- protocolos: camada OSI ---
+# HTTPS aparece como HTTPSobreTLS: o leitor trata "HTTPS" como plural de "HTTP" e juntaria os dois
+HTTP | camada_osi | Aplicacao
+HTTPSobreTLS | camada_osi | Aplicacao
+FTP | camada_osi | Aplicacao
+SSH | camada_osi | Aplicacao
+Telnet | camada_osi | Aplicacao
+SMTP | camada_osi | Aplicacao
+DNS | camada_osi | Aplicacao
+DHCP | camada_osi | Aplicacao
+SNMP | camada_osi | Aplicacao
+RDP | camada_osi | Aplicacao
+TLS | camada_osi | Apresentacao | 0.6
+TCP | camada_osi | Transporte
+UDP | camada_osi | Transporte
+IP | camada_osi | Rede
+ICMP | camada_osi | Rede
+Ethernet | camada_osi | Enlace
+WiFi | camada_osi | Enlace
+
+# --- protocolos: porta padrão (IANA) e transporte ---
+HTTP | porta_padrao | Porta80
+HTTPSobreTLS | porta_padrao | Porta443
+FTP | porta_padrao | Porta21
+SSH | porta_padrao | Porta22
+Telnet | porta_padrao | Porta23
+SMTP | porta_padrao | Porta25
+DNS | porta_padrao | Porta53
+DHCP | porta_padrao | Porta67
+SNMP | porta_padrao | Porta161
+RDP | porta_padrao | Porta3389
+HTTP | usa_transporte | TCP
+HTTPSobreTLS | usa_transporte | TCP
+FTP | usa_transporte | TCP
+SSH | usa_transporte | TCP
+Telnet | usa_transporte | TCP
+SMTP | usa_transporte | TCP
+RDP | usa_transporte | TCP
+DNS | usa_transporte | UDP
+DNS | usa_transporte | TCP
+DHCP | usa_transporte | UDP
+SNMP | usa_transporte | UDP
+
+# --- segurança dos protocolos ---
+HTTPSobreTLS | tem_propriedade | criptografado
+SSH | tem_propriedade | criptografado
+Telnet | não_tem_propriedade | criptografado
+HTTP | não_tem_propriedade | criptografado
+FTP | não_tem_propriedade | criptografado
+SSH | substitui | Telnet
+HTTPSobreTLS | usa | TLS
+
+# --- endereçamento ---
+IPv4 | tamanho_do_endereco | Bits32
+IPv6 | tamanho_do_endereco | Bits128
+IPv6 | sucede | IPv4
+Faixa10_0_0_0_8 | é_um | EnderecoPrivado
+Faixa172_16_0_0_12 | é_um | EnderecoPrivado
+Faixa192_168_0_0_16 | é_um | EnderecoPrivado
+Faixa127_0_0_0_8 | é_um | EnderecoDeLoopback
+EnderecoPrivado | não_tem_propriedade | roteavel_na_internet
+EnderecoPublico | tem_propriedade | roteavel_na_internet
+NAT | traduz | EnderecoPrivado
+DNS | traduz | NomeDeDominio
+DHCP | atribui | EnderecoIP
+ARP | resolve | EnderecoMAC
+
+# --- equipamentos ---
+Hub | opera_na_camada | Fisica
+Repetidor | opera_na_camada | Fisica
+Switch | opera_na_camada | Enlace
+PontoDeAcesso | opera_na_camada | Enlace
+Roteador | opera_na_camada | Rede
+SwitchCamada3 | opera_na_camada | Rede
+SwitchCamada3 | opera_na_camada | Enlace
+Hub | não_tem_propriedade | segmenta_dominio_de_colisao
+Switch | tem_propriedade | segmenta_dominio_de_colisao
+Roteador | tem_propriedade | segmenta_dominio_de_broadcast
+Firewall | filtra | TrafegoDeRede
+
+# --- padrões e meios físicos ---
+Ethernet | padronizado_por | IEEE8023
+WiFi | padronizado_por | IEEE80211
+FibraOptica | é_um | MeioDeTransmissao
+CaboParTrancado | é_um | MeioDeTransmissao
+FibraOptica | tem_propriedade | imune_a_interferencia_eletromagnetica
+CaboParTrancado | não_tem_propriedade | imune_a_interferencia_eletromagnetica
+FibraMonomodo | é_um | FibraOptica
+FibraMultimodo | é_um | FibraOptica
+FibraMonomodo | alcanca_mais_que | FibraMultimodo
+
+# --- topologias ---
+TopologiaEstrela | é_um | Topologia
+TopologiaBarramento | é_um | Topologia
+TopologiaAnel | é_um | Topologia
+TopologiaMalha | é_um | Topologia
+TopologiaEstrela | tem_ponto_central | Switch
+TopologiaMalha | tem_propriedade | caminhos_redundantes

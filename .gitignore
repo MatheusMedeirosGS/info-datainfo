@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+.venv/
+build/
+dist/
+*.egg-info/
+
+# gerados ao usar o chat
+*_atualizada.txt
+*_exportada.*
+*_exportacao*
+*_tabela*.csv
+*_ata.pdf
+base_conhecimento.txt
+downloads_info/
+grafo_*.png
+propagacao.png
+calibracao.png
+info_sessao.json
+memoria_ia.json
+anexos_info/
+grafo_info.html
+*_ata.docx
+.pytest_cache/

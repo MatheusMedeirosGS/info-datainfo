@@ -1,0 +1,2662 @@
+{
+ "fatos": [
+  {
+   "s": "Ave",
+   "r": "subclasse_de",
+   "o": "Animal",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Mamifero",
+   "r": "subclasse_de",
+   "o": "Animal",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Peixe",
+   "r": "subclasse_de",
+   "o": "Animal",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Reptil",
+   "r": "subclasse_de",
+   "o": "Animal",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "AveAquatica",
+   "r": "subclasse_de",
+   "o": "Ave",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Animal",
+   "r": "subclasse_de",
+   "o": "SerVivo",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Animal",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Ave",
+   "r": "tem_propriedade",
+   "o": "penas",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Ave",
+   "r": "tem_propriedade",
+   "o": "voa",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Mamifero",
+   "r": "tem_propriedade",
+   "o": "pelos",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Mamifero",
+   "r": "tem_propriedade",
+   "o": "mama",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Peixe",
+   "r": "tem_propriedade",
+   "o": "nada",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Peixe",
+   "r": "tem_propriedade",
+   "o": "escamas",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Reptil",
+   "r": "tem_propriedade",
+   "o": "escamas",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Aguia",
+   "r": "é_um",
+   "o": "Ave",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Pato",
+   "r": "é_um",
+   "o": "Ave",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Pato",
+   "r": "tem_propriedade",
+   "o": "nada",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Cisne",
+   "r": "é_um",
+   "o": "Ave",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Cisne",
+   "r": "tem_propriedade",
+   "o": "nada",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Pinguim",
+   "r": "é_um",
+   "o": "Ave",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Pinguim",
+   "r": "tem_propriedade",
+   "o": "nada",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Pinguim",
+   "r": "não_tem_propriedade",
+   "o": "voa",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Pata",
+   "r": "é_um",
+   "o": "Ave",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Pato",
+   "r": "parceiro_de",
+   "o": "Pata",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Gato",
+   "r": "é_um",
+   "o": "Mamifero",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Cachorro",
+   "r": "é_um",
+   "o": "Mamifero",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Lobo",
+   "r": "é_um",
+   "o": "Mamifero",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Golfinho",
+   "r": "é_um",
+   "o": "Mamifero",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Golfinho",
+   "r": "tem_propriedade",
+   "o": "nada",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Baleia",
+   "r": "é_um",
+   "o": "Mamifero",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Baleia",
+   "r": "tem_propriedade",
+   "o": "nada",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Tubarao",
+   "r": "é_um",
+   "o": "Peixe",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Salmao",
+   "r": "é_um",
+   "o": "Peixe",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Cobra",
+   "r": "é_um",
+   "o": "Reptil",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Cobra",
+   "r": "não_tem_propriedade",
+   "o": "pelos",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Aguia",
+   "r": "predador_de",
+   "o": "Salmao",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Tubarao",
+   "r": "predador_de",
+   "o": "Salmao",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Golfinho",
+   "r": "predador_de",
+   "o": "Salmao",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Gato",
+   "r": "predador_de",
+   "o": "Rato",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Cobra",
+   "r": "predador_de",
+   "o": "Sapo",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Tubarao",
+   "r": "predador_de",
+   "o": "Golfinho",
+   "alpha": 5.0,
+   "beta": 5.0,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Aguia",
+   "r": "compete_com",
+   "o": "Tubarao",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Tubarao",
+   "r": "compete_com",
+   "o": "Golfinho",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Cachorro",
+   "r": "evoluiu_de",
+   "o": "Lobo",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Lobo",
+   "r": "evoluiu_de",
+   "o": "Canideo",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Canideo",
+   "r": "evoluiu_de",
+   "o": "Carnivoro",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Golfinho",
+   "r": "habitat_principal",
+   "o": "Oceano",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Golfinho",
+   "r": "habitat_principal",
+   "o": "RioDoce",
+   "alpha": 6.0,
+   "beta": 7.0,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Tubarao",
+   "r": "habitat_principal",
+   "o": "Oceano",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Salmao",
+   "r": "habitat_principal",
+   "o": "Rio",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Pinguim",
+   "r": "habitat_principal",
+   "o": "Antartida",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Rato",
+   "r": "tem_propriedade",
+   "o": "pelos",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Sapo",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 9.9,
+   "beta": 0.10000000000000009,
+   "fonte": "observado",
+   "justificativa": null
+  },
+  {
+   "s": "Aguia",
+   "r": "é_um",
+   "o": "Animal",
+   "alpha": 9.604980000000001,
+   "beta": 0.39501999999999926,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Aguia",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Baleia",
+   "r": "é_um",
+   "o": "Animal",
+   "alpha": 9.604980000000001,
+   "beta": 0.39501999999999926,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Baleia",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cachorro",
+   "r": "é_um",
+   "o": "Animal",
+   "alpha": 9.604980000000001,
+   "beta": 0.39501999999999926,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Cachorro",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cisne",
+   "r": "é_um",
+   "o": "Animal",
+   "alpha": 9.604980000000001,
+   "beta": 0.39501999999999926,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Cisne",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cobra",
+   "r": "é_um",
+   "o": "Animal",
+   "alpha": 9.604980000000001,
+   "beta": 0.39501999999999926,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Cobra",
+      "é_um",
+      "Reptil"
+     ],
+     [
+      "Reptil",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Gato",
+   "r": "é_um",
+   "o": "Animal",
+   "alpha": 9.604980000000001,
+   "beta": 0.39501999999999926,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Gato",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Golfinho",
+   "r": "é_um",
+   "o": "Animal",
+   "alpha": 9.604980000000001,
+   "beta": 0.39501999999999926,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Golfinho",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Lobo",
+   "r": "é_um",
+   "o": "Animal",
+   "alpha": 9.604980000000001,
+   "beta": 0.39501999999999926,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Lobo",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pata",
+   "r": "é_um",
+   "o": "Animal",
+   "alpha": 9.604980000000001,
+   "beta": 0.39501999999999926,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Pata",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pato",
+   "r": "é_um",
+   "o": "Animal",
+   "alpha": 9.604980000000001,
+   "beta": 0.39501999999999926,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Pato",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pinguim",
+   "r": "é_um",
+   "o": "Animal",
+   "alpha": 9.604980000000001,
+   "beta": 0.39501999999999926,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Pinguim",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Salmao",
+   "r": "é_um",
+   "o": "Animal",
+   "alpha": 9.604980000000001,
+   "beta": 0.39501999999999926,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Salmao",
+      "é_um",
+      "Peixe"
+     ],
+     [
+      "Peixe",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Tubarao",
+   "r": "é_um",
+   "o": "Animal",
+   "alpha": 9.604980000000001,
+   "beta": 0.39501999999999926,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Tubarao",
+      "é_um",
+      "Peixe"
+     ],
+     [
+      "Peixe",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Aguia",
+   "r": "tem_propriedade",
+   "o": "penas",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Aguia",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "tem_propriedade",
+      "penas"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Aguia",
+   "r": "tem_propriedade",
+   "o": "voa",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Aguia",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "tem_propriedade",
+      "voa"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Baleia",
+   "r": "tem_propriedade",
+   "o": "mama",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Baleia",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "tem_propriedade",
+      "mama"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Baleia",
+   "r": "tem_propriedade",
+   "o": "pelos",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Baleia",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "tem_propriedade",
+      "pelos"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cachorro",
+   "r": "tem_propriedade",
+   "o": "mama",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Cachorro",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "tem_propriedade",
+      "mama"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cachorro",
+   "r": "tem_propriedade",
+   "o": "pelos",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Cachorro",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "tem_propriedade",
+      "pelos"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cisne",
+   "r": "tem_propriedade",
+   "o": "penas",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Cisne",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "tem_propriedade",
+      "penas"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cisne",
+   "r": "tem_propriedade",
+   "o": "voa",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Cisne",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "tem_propriedade",
+      "voa"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cobra",
+   "r": "tem_propriedade",
+   "o": "escamas",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Cobra",
+      "é_um",
+      "Reptil"
+     ],
+     [
+      "Reptil",
+      "tem_propriedade",
+      "escamas"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Gato",
+   "r": "tem_propriedade",
+   "o": "mama",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Gato",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "tem_propriedade",
+      "mama"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Gato",
+   "r": "tem_propriedade",
+   "o": "pelos",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Gato",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "tem_propriedade",
+      "pelos"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Golfinho",
+   "r": "tem_propriedade",
+   "o": "mama",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Golfinho",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "tem_propriedade",
+      "mama"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Golfinho",
+   "r": "tem_propriedade",
+   "o": "pelos",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Golfinho",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "tem_propriedade",
+      "pelos"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Lobo",
+   "r": "tem_propriedade",
+   "o": "mama",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Lobo",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "tem_propriedade",
+      "mama"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Lobo",
+   "r": "tem_propriedade",
+   "o": "pelos",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Lobo",
+      "é_um",
+      "Mamifero"
+     ],
+     [
+      "Mamifero",
+      "tem_propriedade",
+      "pelos"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pata",
+   "r": "tem_propriedade",
+   "o": "penas",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Pata",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "tem_propriedade",
+      "penas"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pata",
+   "r": "tem_propriedade",
+   "o": "voa",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Pata",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "tem_propriedade",
+      "voa"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pato",
+   "r": "tem_propriedade",
+   "o": "penas",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Pato",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "tem_propriedade",
+      "penas"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pato",
+   "r": "tem_propriedade",
+   "o": "voa",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Pato",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "tem_propriedade",
+      "voa"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pinguim",
+   "r": "tem_propriedade",
+   "o": "penas",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Pinguim",
+      "é_um",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "tem_propriedade",
+      "penas"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Salmao",
+   "r": "tem_propriedade",
+   "o": "escamas",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Salmao",
+      "é_um",
+      "Peixe"
+     ],
+     [
+      "Peixe",
+      "tem_propriedade",
+      "escamas"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Salmao",
+   "r": "tem_propriedade",
+   "o": "nada",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Salmao",
+      "é_um",
+      "Peixe"
+     ],
+     [
+      "Peixe",
+      "tem_propriedade",
+      "nada"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Tubarao",
+   "r": "tem_propriedade",
+   "o": "escamas",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Tubarao",
+      "é_um",
+      "Peixe"
+     ],
+     [
+      "Peixe",
+      "tem_propriedade",
+      "escamas"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Tubarao",
+   "r": "tem_propriedade",
+   "o": "nada",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Tubarao",
+      "é_um",
+      "Peixe"
+     ],
+     [
+      "Peixe",
+      "tem_propriedade",
+      "nada"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Ave",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "propriedade_da_superclasse",
+    [
+     [
+      "Ave",
+      "subclasse_de",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "AveAquatica",
+   "r": "tem_propriedade",
+   "o": "penas",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "propriedade_da_superclasse",
+    [
+     [
+      "AveAquatica",
+      "subclasse_de",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "tem_propriedade",
+      "penas"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "AveAquatica",
+   "r": "tem_propriedade",
+   "o": "voa",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "propriedade_da_superclasse",
+    [
+     [
+      "AveAquatica",
+      "subclasse_de",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "tem_propriedade",
+      "voa"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Mamifero",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "propriedade_da_superclasse",
+    [
+     [
+      "Mamifero",
+      "subclasse_de",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Peixe",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "propriedade_da_superclasse",
+    [
+     [
+      "Peixe",
+      "subclasse_de",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Reptil",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.8209,
+   "beta": 1.1790999999999996,
+   "fonte": "inferido",
+   "justificativa": [
+    "propriedade_da_superclasse",
+    [
+     [
+      "Reptil",
+      "subclasse_de",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cachorro",
+   "r": "evoluiu_de",
+   "o": "Canideo",
+   "alpha": 9.310949999999998,
+   "beta": 0.689050000000001,
+   "fonte": "inferido",
+   "justificativa": [
+    "transitiva[evoluiu_de]",
+    [
+     [
+      "Cachorro",
+      "evoluiu_de",
+      "Lobo"
+     ],
+     [
+      "Lobo",
+      "evoluiu_de",
+      "Canideo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Lobo",
+   "r": "evoluiu_de",
+   "o": "Carnivoro",
+   "alpha": 9.310949999999998,
+   "beta": 0.689050000000001,
+   "fonte": "inferido",
+   "justificativa": [
+    "transitiva[evoluiu_de]",
+    [
+     [
+      "Lobo",
+      "evoluiu_de",
+      "Canideo"
+     ],
+     [
+      "Canideo",
+      "evoluiu_de",
+      "Carnivoro"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Ave",
+   "r": "subclasse_de",
+   "o": "SerVivo",
+   "alpha": 9.310949999999998,
+   "beta": 0.689050000000001,
+   "fonte": "inferido",
+   "justificativa": [
+    "transitiva[subclasse_de]",
+    [
+     [
+      "Ave",
+      "subclasse_de",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "AveAquatica",
+   "r": "subclasse_de",
+   "o": "Animal",
+   "alpha": 9.310949999999998,
+   "beta": 0.689050000000001,
+   "fonte": "inferido",
+   "justificativa": [
+    "transitiva[subclasse_de]",
+    [
+     [
+      "AveAquatica",
+      "subclasse_de",
+      "Ave"
+     ],
+     [
+      "Ave",
+      "subclasse_de",
+      "Animal"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Mamifero",
+   "r": "subclasse_de",
+   "o": "SerVivo",
+   "alpha": 9.310949999999998,
+   "beta": 0.689050000000001,
+   "fonte": "inferido",
+   "justificativa": [
+    "transitiva[subclasse_de]",
+    [
+     [
+      "Mamifero",
+      "subclasse_de",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Peixe",
+   "r": "subclasse_de",
+   "o": "SerVivo",
+   "alpha": 9.310949999999998,
+   "beta": 0.689050000000001,
+   "fonte": "inferido",
+   "justificativa": [
+    "transitiva[subclasse_de]",
+    [
+     [
+      "Peixe",
+      "subclasse_de",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Reptil",
+   "r": "subclasse_de",
+   "o": "SerVivo",
+   "alpha": 9.310949999999998,
+   "beta": 0.689050000000001,
+   "fonte": "inferido",
+   "justificativa": [
+    "transitiva[subclasse_de]",
+    [
+     [
+      "Reptil",
+      "subclasse_de",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Tubarao",
+   "r": "compete_com",
+   "o": "Aguia",
+   "alpha": 9.801,
+   "beta": 0.1990000000000003,
+   "fonte": "inferido",
+   "justificativa": [
+    "simetrica[compete_com]",
+    [
+     [
+      "Aguia",
+      "compete_com",
+      "Tubarao"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Golfinho",
+   "r": "compete_com",
+   "o": "Tubarao",
+   "alpha": 9.801,
+   "beta": 0.1990000000000003,
+   "fonte": "inferido",
+   "justificativa": [
+    "simetrica[compete_com]",
+    [
+     [
+      "Tubarao",
+      "compete_com",
+      "Golfinho"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pata",
+   "r": "parceiro_de",
+   "o": "Pato",
+   "alpha": 9.801,
+   "beta": 0.1990000000000003,
+   "fonte": "inferido",
+   "justificativa": [
+    "simetrica[parceiro_de]",
+    [
+     [
+      "Pato",
+      "parceiro_de",
+      "Pata"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Salmao",
+   "r": "presa_de",
+   "o": "Aguia",
+   "alpha": 9.801,
+   "beta": 0.1990000000000003,
+   "fonte": "inferido",
+   "justificativa": [
+    "inversa[predador_de>presa_de]",
+    [
+     [
+      "Aguia",
+      "predador_de",
+      "Salmao"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Sapo",
+   "r": "presa_de",
+   "o": "Cobra",
+   "alpha": 9.801,
+   "beta": 0.1990000000000003,
+   "fonte": "inferido",
+   "justificativa": [
+    "inversa[predador_de>presa_de]",
+    [
+     [
+      "Cobra",
+      "predador_de",
+      "Sapo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Rato",
+   "r": "presa_de",
+   "o": "Gato",
+   "alpha": 9.801,
+   "beta": 0.1990000000000003,
+   "fonte": "inferido",
+   "justificativa": [
+    "inversa[predador_de>presa_de]",
+    [
+     [
+      "Gato",
+      "predador_de",
+      "Rato"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Salmao",
+   "r": "presa_de",
+   "o": "Golfinho",
+   "alpha": 9.801,
+   "beta": 0.1990000000000003,
+   "fonte": "inferido",
+   "justificativa": [
+    "inversa[predador_de>presa_de]",
+    [
+     [
+      "Golfinho",
+      "predador_de",
+      "Salmao"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Golfinho",
+   "r": "presa_de",
+   "o": "Tubarao",
+   "alpha": 4.95,
+   "beta": 5.05,
+   "fonte": "inferido",
+   "justificativa": [
+    "inversa[predador_de>presa_de]",
+    [
+     [
+      "Tubarao",
+      "predador_de",
+      "Golfinho"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Salmao",
+   "r": "presa_de",
+   "o": "Tubarao",
+   "alpha": 9.801,
+   "beta": 0.1990000000000003,
+   "fonte": "inferido",
+   "justificativa": [
+    "inversa[predador_de>presa_de]",
+    [
+     [
+      "Tubarao",
+      "predador_de",
+      "Salmao"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Aguia",
+   "r": "é_um",
+   "o": "SerVivo",
+   "alpha": 9.318751596000002,
+   "beta": 0.6812484039999978,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Aguia",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Baleia",
+   "r": "é_um",
+   "o": "SerVivo",
+   "alpha": 9.318751596000002,
+   "beta": 0.6812484039999978,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Baleia",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cachorro",
+   "r": "é_um",
+   "o": "SerVivo",
+   "alpha": 9.318751596000002,
+   "beta": 0.6812484039999978,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Cachorro",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cisne",
+   "r": "é_um",
+   "o": "SerVivo",
+   "alpha": 9.318751596000002,
+   "beta": 0.6812484039999978,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Cisne",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cobra",
+   "r": "é_um",
+   "o": "SerVivo",
+   "alpha": 9.318751596000002,
+   "beta": 0.6812484039999978,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Cobra",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Gato",
+   "r": "é_um",
+   "o": "SerVivo",
+   "alpha": 9.318751596000002,
+   "beta": 0.6812484039999978,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Gato",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Golfinho",
+   "r": "é_um",
+   "o": "SerVivo",
+   "alpha": 9.318751596000002,
+   "beta": 0.6812484039999978,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Golfinho",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Lobo",
+   "r": "é_um",
+   "o": "SerVivo",
+   "alpha": 9.318751596000002,
+   "beta": 0.6812484039999978,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Lobo",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pata",
+   "r": "é_um",
+   "o": "SerVivo",
+   "alpha": 9.318751596000002,
+   "beta": 0.6812484039999978,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Pata",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pato",
+   "r": "é_um",
+   "o": "SerVivo",
+   "alpha": 9.318751596000002,
+   "beta": 0.6812484039999978,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Pato",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pinguim",
+   "r": "é_um",
+   "o": "SerVivo",
+   "alpha": 9.318751596000002,
+   "beta": 0.6812484039999978,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Pinguim",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Salmao",
+   "r": "é_um",
+   "o": "SerVivo",
+   "alpha": 9.318751596000002,
+   "beta": 0.6812484039999978,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Salmao",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Tubarao",
+   "r": "é_um",
+   "o": "SerVivo",
+   "alpha": 9.318751596000002,
+   "beta": 0.6812484039999978,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_classe",
+    [
+     [
+      "Tubarao",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Aguia",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.558037180000001,
+   "beta": 1.441962819999999,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Aguia",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Baleia",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.558037180000001,
+   "beta": 1.441962819999999,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Baleia",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cachorro",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.558037180000001,
+   "beta": 1.441962819999999,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Cachorro",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cisne",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.558037180000001,
+   "beta": 1.441962819999999,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Cisne",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cobra",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.558037180000001,
+   "beta": 1.441962819999999,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Cobra",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Gato",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.558037180000001,
+   "beta": 1.441962819999999,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Gato",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Golfinho",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.558037180000001,
+   "beta": 1.441962819999999,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Golfinho",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Lobo",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.558037180000001,
+   "beta": 1.441962819999999,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Lobo",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pata",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.558037180000001,
+   "beta": 1.441962819999999,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Pata",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pato",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.558037180000001,
+   "beta": 1.441962819999999,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Pato",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pinguim",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.558037180000001,
+   "beta": 1.441962819999999,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Pinguim",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Salmao",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.558037180000001,
+   "beta": 1.441962819999999,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Salmao",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Tubarao",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.558037180000001,
+   "beta": 1.441962819999999,
+   "fonte": "inferido",
+   "justificativa": [
+    "heranca_de_propriedade",
+    [
+     [
+      "Tubarao",
+      "é_um",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "AveAquatica",
+   "r": "tem_propriedade",
+   "o": "respira",
+   "alpha": 8.296056449999998,
+   "beta": 1.7039435500000022,
+   "fonte": "inferido",
+   "justificativa": [
+    "propriedade_da_superclasse",
+    [
+     [
+      "AveAquatica",
+      "subclasse_de",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "tem_propriedade",
+      "respira"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cisne",
+   "r": "é_um",
+   "o": "AveAquatica",
+   "alpha": 7.42278735,
+   "beta": 2.5772126500000003,
+   "fonte": "inferido",
+   "justificativa": [
+    "ave_aquatica",
+    [
+     [
+      "Cisne",
+      "tem_propriedade",
+      "penas"
+     ],
+     [
+      "Cisne",
+      "tem_propriedade",
+      "nada"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pato",
+   "r": "é_um",
+   "o": "AveAquatica",
+   "alpha": 7.42278735,
+   "beta": 2.5772126500000003,
+   "fonte": "inferido",
+   "justificativa": [
+    "ave_aquatica",
+    [
+     [
+      "Pato",
+      "tem_propriedade",
+      "penas"
+     ],
+     [
+      "Pato",
+      "tem_propriedade",
+      "nada"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Pinguim",
+   "r": "é_um",
+   "o": "AveAquatica",
+   "alpha": 7.42278735,
+   "beta": 2.5772126500000003,
+   "fonte": "inferido",
+   "justificativa": [
+    "ave_aquatica",
+    [
+     [
+      "Pinguim",
+      "tem_propriedade",
+      "penas"
+     ],
+     [
+      "Pinguim",
+      "tem_propriedade",
+      "nada"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "Cachorro",
+   "r": "evoluiu_de",
+   "o": "Carnivoro",
+   "alpha": 8.756948474999998,
+   "beta": 1.243051525000003,
+   "fonte": "inferido",
+   "justificativa": [
+    "transitiva[evoluiu_de]",
+    [
+     [
+      "Cachorro",
+      "evoluiu_de",
+      "Canideo"
+     ],
+     [
+      "Canideo",
+      "evoluiu_de",
+      "Carnivoro"
+     ]
+    ]
+   ]
+  },
+  {
+   "s": "AveAquatica",
+   "r": "subclasse_de",
+   "o": "SerVivo",
+   "alpha": 8.756948474999998,
+   "beta": 1.243051525000003,
+   "fonte": "inferido",
+   "justificativa": [
+    "transitiva[subclasse_de]",
+    [
+     [
+      "AveAquatica",
+      "subclasse_de",
+      "Animal"
+     ],
+     [
+      "Animal",
+      "subclasse_de",
+      "SerVivo"
+     ]
+    ]
+   ]
+  }
+ ],
+ "regras": [
+  {
+   "nome": "heranca_de_classe",
+   "premissas": [
+    [
+     "?x",
+     "é_um",
+     "?c"
+    ],
+    [
+     "?c",
+     "subclasse_de",
+     "?d"
+    ]
+   ],
+   "conclusao": [
+    "?x",
+    "é_um",
+    "?d"
+   ],
+   "alpha": 9.8,
+   "beta": 0.20000000000000018,
+   "origem": "ontologica",
+   "metricas": {}
+  },
+  {
+   "nome": "heranca_de_propriedade",
+   "premissas": [
+    [
+     "?x",
+     "é_um",
+     "?c"
+    ],
+    [
+     "?c",
+     "tem_propriedade",
+     "?p"
+    ]
+   ],
+   "conclusao": [
+    "?x",
+    "tem_propriedade",
+    "?p"
+   ],
+   "alpha": 9.0,
+   "beta": 0.9999999999999998,
+   "origem": "ontologica",
+   "metricas": {}
+  },
+  {
+   "nome": "propriedade_da_superclasse",
+   "premissas": [
+    [
+     "?c",
+     "subclasse_de",
+     "?d"
+    ],
+    [
+     "?d",
+     "tem_propriedade",
+     "?p"
+    ]
+   ],
+   "conclusao": [
+    "?c",
+    "tem_propriedade",
+    "?p"
+   ],
+   "alpha": 9.0,
+   "beta": 0.9999999999999998,
+   "origem": "ontologica",
+   "metricas": {}
+  },
+  {
+   "nome": "ave_aquatica",
+   "premissas": [
+    [
+     "?a",
+     "tem_propriedade",
+     "penas"
+    ],
+    [
+     "?a",
+     "tem_propriedade",
+     "nada"
+    ]
+   ],
+   "conclusao": [
+    "?a",
+    "é_um",
+    "AveAquatica"
+   ],
+   "alpha": 8.5,
+   "beta": 1.5000000000000002,
+   "origem": "manual",
+   "metricas": {}
+  }
+ ],
+ "rejeitados": [],
+ "ontologia": {
+  "transitivas": [
+   "evoluiu_de",
+   "subclasse_de"
+  ],
+  "simetricas": [
+   "compete_com",
+   "parceiro_de"
+  ],
+  "inversas": {
+   "predador_de": "presa_de"
+  },
+  "funcionais": [
+   "habitat_principal"
+  ],
+  "negacoes": {
+   "tem_propriedade": "não_tem_propriedade"
+  },
+  "disjuntas": [
+   [
+    "Ave",
+    "Mamifero"
+   ],
+   [
+    "Mamifero",
+    "Peixe"
+   ],
+   [
+    "Ave",
+    "Peixe"
+   ]
+  ]
+ },
+ "contador_inducao": 0
+}

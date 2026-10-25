@@ -1,0 +1,238 @@
+# Base de conhecimento: animais (taxonomia, características, alimentação, exceções)
+# Formato: sujeito | relação | objeto | confiança (opcional, de 0 a 1)
+# Linhas com @ declaram propriedades das relações e regras. Linhas com # são comentários.
+# Generalizações com exceção conhecida (ex.: "aves voam") têm confiança menor que 1.
+
+# --- propriedades das relações ---
+@oposta tem_propriedade não_tem_propriedade
+@transitiva subclasse_de
+@transitiva evoluiu_de
+@inversa predador_de presa_de
+@inversa poliniza polinizada_por
+@simetrica compete_com
+@simetrica simbiose_com
+@funcional dieta
+@funcional ordem
+@disjuntas Vertebrado Invertebrado
+@disjuntas Mamifero Ave
+@disjuntas Mamifero Peixe
+@disjuntas Mamifero Reptil
+@disjuntas Mamifero Anfibio
+@disjuntas Ave Peixe
+@disjuntas Ave Reptil
+@disjuntas Peixe Anfibio
+@disjuntas Inseto Aracnideo
+@disjuntas Inseto Crustaceo
+
+# --- regras ---
+# penas só existem em aves (entre os animais atuais)
+@regra penas_indicam_ave: (?a tem_propriedade penas) & (?a tem_propriedade poe_ovos) => (?a é_um Ave) 0.95
+# amamentar é exclusivo de mamíferos
+@regra amamentar_indica_mamifero: (?a tem_propriedade amamenta) => (?a é_um Mamifero) 0.95
+# dois predadores da mesma presa disputam alimento
+@regra mesma_presa_compete: (?a predador_de ?p) & (?b predador_de ?p) => (?a compete_com ?b) 0.6
+# quem tem dieta carnívora e caça outro animal é predador ativo
+@regra carnivoro_que_caca: (?a dieta Carnivoro) & (?a predador_de ?p) => (?a tem_propriedade predador_ativo) 0.85
+# herança de exceção: o motor herda tem_propriedade da classe, esta regra herda também não_tem_propriedade
+@regra heranca_negativa: (?x é_um ?c) & (?c não_tem_propriedade ?p) => (?x não_tem_propriedade ?p) 0.9
+# ave aquática: penas e nada
+@regra ave_aquatica: (?a tem_propriedade penas) & (?a tem_propriedade nada) => (?a é_um AveAquatica) 0.85
+
+# --- taxonomia ---
+MaiorRoedorVivo | subclasse_de | Roedor
+MaiorAnimalConhecido | subclasse_de | Cetaceo
+MaiorAveViva | subclasse_de | Ratita
+Animal | subclasse_de | SerVivo
+Vertebrado | subclasse_de | Animal
+Invertebrado | subclasse_de | Animal
+Mamifero | subclasse_de | Vertebrado
+Ave | subclasse_de | Vertebrado
+Reptil | subclasse_de | Vertebrado
+Anfibio | subclasse_de | Vertebrado
+Peixe | subclasse_de | Vertebrado
+Artropode | subclasse_de | Invertebrado
+Molusco | subclasse_de | Invertebrado
+Inseto | subclasse_de | Artropode
+Aracnideo | subclasse_de | Artropode
+Crustaceo | subclasse_de | Artropode
+Roedor | subclasse_de | Mamifero
+Felino | subclasse_de | Mamifero
+Cetaceo | subclasse_de | Mamifero
+Quiroptero | subclasse_de | Mamifero
+Monotremado | subclasse_de | Mamifero
+Ratita | subclasse_de | Ave
+Pinguim | subclasse_de | Ave
+AveAquatica | subclasse_de | Ave
+Serpente | subclasse_de | Reptil
+
+# --- características das classes ---
+Animal | tem_propriedade | heterotrofo
+Animal | tem_propriedade | respira
+Vertebrado | tem_propriedade | coluna_vertebral
+Invertebrado | não_tem_propriedade | coluna_vertebral
+Mamifero | tem_propriedade | pelos
+Mamifero | tem_propriedade | amamenta
+Mamifero | tem_propriedade | sangue_quente
+Mamifero | tem_propriedade | respira_por_pulmoes
+Mamifero | não_tem_propriedade | respira_por_branquias
+Mamifero | não_tem_propriedade | poe_ovos | 0.9
+Mamifero | não_tem_propriedade | voa | 0.9
+Ave | tem_propriedade | penas
+Ave | tem_propriedade | bico
+Ave | tem_propriedade | poe_ovos
+Ave | tem_propriedade | sangue_quente
+Ave | tem_propriedade | voa | 0.8
+Reptil | tem_propriedade | escamas
+Reptil | tem_propriedade | sangue_frio
+Reptil | tem_propriedade | poe_ovos | 0.8
+Anfibio | tem_propriedade | pele_permeavel
+Anfibio | tem_propriedade | sangue_frio
+Anfibio | tem_propriedade | metamorfose | 0.8
+Peixe | tem_propriedade | nadadeiras
+Peixe | tem_propriedade | respira_por_branquias
+Peixe | tem_propriedade | nada
+Peixe | tem_propriedade | sangue_frio | 0.9
+Artropode | tem_propriedade | exoesqueleto
+Artropode | tem_propriedade | patas_articuladas
+Inseto | tem_propriedade | seis_patas
+Inseto | tem_propriedade | antenas
+Aracnideo | tem_propriedade | oito_patas
+Aracnideo | não_tem_propriedade | antenas
+Cetaceo | tem_propriedade | nada
+Cetaceo | tem_propriedade | vive_na_agua
+Quiroptero | tem_propriedade | voa
+Quiroptero | tem_propriedade | ecolocalizacao | 0.8
+Monotremado | tem_propriedade | poe_ovos
+Ratita | não_tem_propriedade | voa
+Pinguim | não_tem_propriedade | voa
+Pinguim | tem_propriedade | nada
+Serpente | não_tem_propriedade | patas
+Serpente | dieta | Carnivoro
+
+# --- mamíferos ---
+Gato | é_um | Felino
+Gato | dieta | Carnivoro
+Leao | é_um | Felino
+Leao | dieta | Carnivoro
+Onca | é_um | Felino
+Onca | dieta | Carnivoro
+Cachorro | é_um | Mamifero
+Lobo | é_um | Mamifero
+Lobo | dieta | Carnivoro
+Capivara | é_um | Roedor
+Capivara | dieta | Herbivoro
+Capivara | é_um | MaiorRoedorVivo
+Rato | é_um | Roedor
+Coelho | é_um | Mamifero
+Coelho | dieta | Herbivoro
+Zebra | é_um | Mamifero
+Zebra | dieta | Herbivoro
+Humano | é_um | Mamifero
+Humano | dieta | Onivoro
+Golfinho | é_um | Cetaceo
+Golfinho | dieta | Carnivoro
+Baleia | é_um | Cetaceo
+BaleiaAzul | é_um | Cetaceo
+BaleiaAzul | é_um | MaiorAnimalConhecido
+PeixeBoi | é_um | Mamifero
+PeixeBoi | tem_propriedade | vive_na_agua
+PeixeBoi | dieta | Herbivoro
+Morcego | é_um | Quiroptero
+# exceção real: único mamífero com voo verdadeiro
+Morcego | tem_propriedade | voa
+Ornitorrinco | é_um | Monotremado
+# exceção real: mamífero que põe ovos
+Ornitorrinco | tem_propriedade | poe_ovos
+Equidna | é_um | Monotremado
+Equidna | tem_propriedade | poe_ovos
+
+# --- aves ---
+Aguia | é_um | Ave
+Aguia | dieta | Carnivoro
+BeijaFlor | é_um | Ave
+BeijaFlor | tem_propriedade | voo_pairado
+Pato | é_um | Ave
+Pato | tem_propriedade | nada
+Cisne | é_um | Ave
+Cisne | tem_propriedade | nada
+PinguimImperador | é_um | Pinguim
+# exceção real: ave que não voa
+PinguimImperador | não_tem_propriedade | voa
+PinguimImperador | dieta | Carnivoro
+Avestruz | é_um | Ratita
+Avestruz | não_tem_propriedade | voa
+Avestruz | é_um | MaiorAveViva
+Ema | é_um | Ratita
+Ema | não_tem_propriedade | voa
+Kiwi | é_um | Ratita
+Kiwi | não_tem_propriedade | voa
+Galinha | é_um | Ave
+
+# --- répteis e anfíbios ---
+Jiboia | é_um | Serpente
+Cascavel | é_um | Serpente
+Cascavel | tem_propriedade | peconhenta
+Jacare | é_um | Reptil
+Jacare | dieta | Carnivoro
+Tartaruga | é_um | Reptil
+Tartaruga | tem_propriedade | carapaca
+Lagartixa | é_um | Reptil
+Sapo | é_um | Anfibio
+Ra | é_um | Anfibio
+Salamandra | é_um | Anfibio
+
+# --- peixes ---
+Tubarao | é_um | Peixe
+Tubarao | tem_propriedade | esqueleto_cartilaginoso
+Tubarao | dieta | Carnivoro
+Salmao | é_um | Peixe
+CavaloMarinho | é_um | Peixe
+PeixePalhaco | é_um | Peixe
+
+# --- invertebrados ---
+Abelha | é_um | Inseto
+Formiga | é_um | Inseto
+Borboleta | é_um | Inseto
+Mosca | é_um | Inseto
+Aranha | é_um | Aracnideo
+Escorpiao | é_um | Aracnideo
+Caranguejo | é_um | Crustaceo
+Polvo | é_um | Molusco
+Polvo | tem_propriedade | oito_bracos
+Caracol | é_um | Molusco
+Anemona | é_um | Invertebrado
+
+# --- cadeia alimentar ---
+Leao | predador_de | Zebra
+Onca | predador_de | Capivara
+Jacare | predador_de | Capivara
+Gato | predador_de | Rato
+Aguia | predador_de | Coelho
+Lobo | predador_de | Coelho
+Aranha | predador_de | Mosca
+Sapo | predador_de | Mosca
+Tubarao | predador_de | Salmao
+Golfinho | predador_de | Salmao
+Jiboia | predador_de | Rato
+
+# --- interações ---
+Leao | compete_com | Hiena
+Hiena | é_um | Mamifero
+PeixePalhaco | simbiose_com | Anemona
+Abelha | poliniza | Flor
+BeijaFlor | poliniza | Flor
+
+# --- evolução ---
+Cachorro | evoluiu_de | Lobo
+Ave | evoluiu_de | DinossauroTeropode
+Cetaceo | evoluiu_de | MamiferoTerrestreAncestral
+
+# --- onde vivem ---
+PinguimImperador | vive_em | Antartida
+Pinguim | vive_em | HemisferioSul
+Capivara | vive_em | AmericaDoSul
+Onca | vive_em | AmericaDoSul
+Ema | vive_em | AmericaDoSul
+Kiwi | vive_em | NovaZelandia
+Ornitorrinco | vive_em | Australia
+Leao | vive_em | Africa

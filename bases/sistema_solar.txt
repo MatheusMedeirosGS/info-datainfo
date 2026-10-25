@@ -1,0 +1,126 @@
+# Base de conhecimento: sistema solar
+# Formato: sujeito | relação | objeto | confiança (opcional, de 0 a 1)
+# Fontes: NASA Solar System Exploration (science.nasa.gov/solar-system) e
+# União Astronômica Internacional, Resolução B5 de 2006 (definição de planeta e planeta anão).
+
+# --- propriedades das relações ---
+@sinonimo pertence ao = pertence_a
+@sinonimo pertence à = pertence_a
+@oposta tem_propriedade não_tem_propriedade
+@transitiva subclasse_de
+@inversa orbita orbitado_por
+@funcional orbita
+@disjuntas Planeta PlanetaAnao
+@disjuntas Planeta Estrela
+@disjuntas Planeta SateliteNatural
+@disjuntas PlanetaRochoso PlanetaGigante
+
+# --- regras ---
+@regra satelite_de_planeta: (?x orbita ?p) & (?p é_um Planeta) => (?x é_um SateliteNatural) 0.95
+@regra satelite_de_planeta_anao: (?x orbita ?p) & (?p é_um PlanetaAnao) => (?x é_um SateliteNatural) 0.95
+@regra planeta_com_lua: (?x orbita ?p) & (?p é_um Planeta) => (?p tem_propriedade satelites_naturais) 0.99
+@regra corpo_do_sistema_solar: (?x orbita Sol) => (?x pertence_a SistemaSolar) 0.99
+@regra lua_do_sistema_solar: (?x orbita ?p) & (?p pertence_a SistemaSolar) => (?x pertence_a SistemaSolar) 0.95
+@regra heranca_negativa: (?x é_um ?c) & (?c não_tem_propriedade ?p) => (?x não_tem_propriedade ?p) 0.9
+
+# --- classes ---
+PrimeiroPlaneta | subclasse_de | Planeta
+SegundoPlaneta | subclasse_de | Planeta
+TerceiroPlaneta | subclasse_de | Planeta
+QuartoPlaneta | subclasse_de | Planeta
+QuintoPlaneta | subclasse_de | Planeta
+SextoPlaneta | subclasse_de | Planeta
+SetimoPlaneta | subclasse_de | Planeta
+OitavoPlaneta | subclasse_de | Planeta
+MaiorPlaneta | subclasse_de | Planeta
+MenorPlaneta | subclasse_de | Planeta
+PlanetaMaisQuente | subclasse_de | Planeta
+MaiorLuaDoSistemaSolar | subclasse_de | SateliteNatural
+Planeta | subclasse_de | CorpoCeleste
+PlanetaAnao | subclasse_de | CorpoCeleste
+Estrela | subclasse_de | CorpoCeleste
+SateliteNatural | subclasse_de | CorpoCeleste
+PlanetaRochoso | subclasse_de | Planeta
+PlanetaGigante | subclasse_de | Planeta
+GiganteGasoso | subclasse_de | PlanetaGigante
+GiganteDeGelo | subclasse_de | PlanetaGigante
+PlanetaRochoso | tem_propriedade | superficie_solida
+PlanetaGigante | não_tem_propriedade | superficie_solida
+PlanetaGigante | tem_propriedade | aneis
+Planeta | tem_propriedade | orbita_limpa
+PlanetaAnao | não_tem_propriedade | orbita_limpa
+Planeta | tem_propriedade | rotacao_prograda | 0.8
+
+# --- o Sol ---
+Sol | é_um | Estrela
+Sol | tipo_espectral | G2V
+
+# --- planetas, em ordem a partir do Sol ---
+Mercurio | é_um | PlanetaRochoso
+Mercurio | é_um | PrimeiroPlaneta
+Mercurio | orbita | Sol
+Mercurio | é_um | MenorPlaneta
+Venus | é_um | PlanetaRochoso
+Venus | é_um | SegundoPlaneta
+Venus | orbita | Sol
+Venus | é_um | PlanetaMaisQuente
+# exceção real: Vênus gira no sentido contrário ao da maioria dos planetas
+Venus | não_tem_propriedade | rotacao_prograda
+Terra | é_um | PlanetaRochoso
+Terra | é_um | TerceiroPlaneta
+Terra | orbita | Sol
+Terra | tem_propriedade | agua_liquida_na_superficie
+Marte | é_um | PlanetaRochoso
+Marte | é_um | QuartoPlaneta
+Marte | orbita | Sol
+Jupiter | é_um | GiganteGasoso
+Jupiter | é_um | QuintoPlaneta
+Jupiter | orbita | Sol
+Jupiter | é_um | MaiorPlaneta
+Saturno | é_um | GiganteGasoso
+Saturno | é_um | SextoPlaneta
+Saturno | orbita | Sol
+Urano | é_um | GiganteDeGelo
+Urano | é_um | SetimoPlaneta
+Urano | orbita | Sol
+# exceção real: Urano tem rotação retrógrada (eixo inclinado cerca de 98 graus)
+Urano | não_tem_propriedade | rotacao_prograda
+Netuno | é_um | GiganteDeGelo
+Netuno | é_um | OitavoPlaneta
+Netuno | orbita | Sol
+# exceção real: Mercúrio e Vênus não têm satélites naturais
+Mercurio | não_tem_propriedade | satelites_naturais
+Venus | não_tem_propriedade | satelites_naturais
+
+# --- planetas anões (UAI, 2006) ---
+Plutao | é_um | PlanetaAnao
+Plutao | orbita | Sol
+Plutao | reclassificado_em | Ano2006
+Ceres | é_um | PlanetaAnao
+Ceres | orbita | Sol
+Ceres | fica_em | CinturaoDeAsteroides
+Eris | é_um | PlanetaAnao
+Eris | orbita | Sol
+Haumea | é_um | PlanetaAnao
+Haumea | orbita | Sol
+Makemake | é_um | PlanetaAnao
+Makemake | orbita | Sol
+Caronte | orbita | Plutao
+
+# --- satélites naturais ---
+Lua | orbita | Terra
+Fobos | orbita | Marte
+Deimos | orbita | Marte
+Io | orbita | Jupiter
+Io | tem_propriedade | vulcanismo_ativo
+Europa | orbita | Jupiter
+Europa | tem_propriedade | oceano_subterraneo | 0.9
+Ganimedes | orbita | Jupiter
+Ganimedes | é_um | MaiorLuaDoSistemaSolar
+Calisto | orbita | Jupiter
+Tita | orbita | Saturno
+Tita | tem_propriedade | atmosfera_densa
+Encelado | orbita | Saturno
+Tritao | orbita | Netuno
+Tritao | tem_propriedade | orbita_retrograda
+Titania | orbita | Urano
